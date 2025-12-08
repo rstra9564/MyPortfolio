@@ -11940,7 +11940,7 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  top: 18rem;
+  top: 20rem;
   background: linear-gradient(90deg, transparent 0%, #32f5b2 20%, #32f5b2 80%, transparent 100%);
   box-shadow: 0 0 20px rgba(50, 245, 178, 0.8), 0 0 40px rgba(50, 245, 178, 0.4);
   pointer-events: none;
