@@ -3,9 +3,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import emailjs from '@emailjs/browser';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const navbar = document.querySelector('.navbar');
 
   // Navbar scroll effect
+  const navbar = document.querySelector('.navbar');
+
   if (navbar) {
     window.addEventListener('scroll', () => {
       navbar.style.background =
@@ -40,63 +41,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const formStatus = document.getElementById('form-status');
 
   if (contactForm) {
+
     const submitButton =
-      contactForm.querySelector('button');
+      contactForm.querySelector('.btn-contact');
 
-    contactForm.addEventListener(
-      'submit',
-      function (e) {
-        e.preventDefault();
+    contactForm.addEventListener('submit', function (e) {
 
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
+      e.preventDefault();
 
-        emailjs
-          .sendForm(
-            'service_2oblj9d',
-            'template_o88v3qj',
-            this,
-            'dnzbIaWyG8WGeMYlo'
-          )
-          .then(() => {
-            formStatus.textContent =
-              'Message sent successfully!';
+      console.log('Form submit detected');
 
-            formStatus.classList.remove('error');
-            formStatus.classList.add('success');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
 
-            contactForm.reset();
+      emailjs.sendForm(
+        'service_2oblj9d',
+        'template_o88v3qj',
+        this,
+        'dnzbIaWyG8WGeMYlo'
+      )
+      .then(() => {
 
-            submitButton.disabled = false;
-            submitButton.textContent =
-              'Send Message';
+        console.log('Email sent successfully');
 
-            setTimeout(() => {
-              formStatus.classList.remove(
-                'success'
-              );
-            }, 5000);
-          })
-          .catch(error => {
-            console.error(error);
+        if (formStatus) {
+          formStatus.textContent =
+            'Message sent successfully!';
 
-            formStatus.textContent =
-              'Failed to send message. Please try again.';
+          formStatus.classList.remove('error');
+          formStatus.classList.add('success');
+        }
 
-            formStatus.classList.remove('success');
-            formStatus.classList.add('error');
+        contactForm.reset();
 
-            submitButton.disabled = false;
-            submitButton.textContent =
-              'Send Message';
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
 
-            setTimeout(() => {
-              formStatus.classList.remove(
-                'error'
-              );
-            }, 5000);
-          });
-      }
-    );
+      })
+      .catch((error) => {
+
+        console.error('EmailJS Error:', error);
+
+        if (formStatus) {
+          formStatus.textContent =
+            'Failed to send message. Please try again.';
+
+          formStatus.classList.remove('success');
+          formStatus.classList.add('error');
+        }
+
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+      });
+
+    });
   }
+
 });
