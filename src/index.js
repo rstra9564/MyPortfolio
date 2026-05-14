@@ -46,15 +46,29 @@ if (contactForm) {
         this,
         'dnzbIaWyG8WGeMYlo'
       )
-      .then(
-        () => {
-          alert('Message sent successfully!');
-          contactForm.reset();
-        },
-        (error) => {
-          alert('Failed to send message.');
-          console.error(error);
-        }
-      );
+      .then(() => {
+        formStatus.textContent =
+          'Message sent successfully!';
+        
+        formStatus.classList.remove('error');
+        formStatus.classList.add('success');
+  
+        contactForm.reset();
+  
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+      })
+      .catch((error) => {
+        console.error(error);
+  
+        formStatus.textContent =
+          'Failed to send message. Please try again.';
+  
+        formStatus.classList.remove('success');
+        formStatus.classList.add('error');
+  
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+      });
   });
 }
