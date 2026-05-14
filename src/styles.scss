@@ -654,6 +654,64 @@ body {
   box-shadow: 0 0 12px rgba(255, 77, 77, 0.2);
 }
 
+// =========================
+// Mobile Navbar (Hamburger)
+// =========================
 
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.45rem 0.7rem;
+  transition: all 0.25s ease;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $neon-green;
+  }
+
+  &:hover {
+    border-color: $neon-green;
+    box-shadow: 0 0 10px rgba(50, 245, 178, 0.5);
+  }
+}
+
+.navbar-toggler-icon {
+  filter: brightness(1.2);
+}
+
+@media (max-width: 991px) {
+
+  .navbar {
+
+    .container {
+      align-items: flex-start;
+    }
+
+    .navbar-collapse {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 16px;
+
+      background: rgba(5, 5, 5, 0.96);
+      backdrop-filter: blur(12px);
+
+      border: 1px solid rgba(50, 245, 178, 0.15);
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(50, 245, 178, 0.08);
+    }
+
+    .navbar-nav {
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      margin-left: 0;
+      padding: 0.85rem 0;
+      width: fit-content;
+    }
+  }
+}
 
 
