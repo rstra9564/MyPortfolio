@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
 
+  // Navbar scroll effect
   if (navbar) {
     window.addEventListener('scroll', () => {
       navbar.style.background =
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       e.preventDefault();
@@ -32,43 +34,69 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Contact form
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  if (contactForm) {
+    const submitButton =
+      contactForm.querySelector('button');
+
+    contactForm.addEventListener(
+      'submit',
+      function (e) {
+        e.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        emailjs
+          .sendForm(
+            'service_2oblj9d',
+            'template_o88v3qj',
+            this,
+            'dnzbIaWyG8WGeMYlo'
+          )
+          .then(() => {
+            formStatus.textContent =
+              'Message sent successfully!';
+
+            formStatus.classList.remove('error');
+            formStatus.classList.add('success');
+
+            contactForm.reset();
+
+            submitButton.disabled = false;
+            submitButton.textContent =
+              'Send Message';
+
+            setTimeout(() => {
+              formStatus.classList.remove(
+                'success'
+              );
+            }, 5000);
+          })
+          .catch(error => {
+            console.error(error);
+
+            formStatus.textContent =
+              'Failed to send message. Please try again.';
+
+            formStatus.classList.remove('success');
+            formStatus.classList.add('error');
+
+            submitButton.disabled = false;
+            submitButton.textContent =
+              'Send Message';
+
+            setTimeout(() => {
+              formStatus.classList.remove(
+                'error'
+              );
+            }, 5000);
+          });
+      }
+    );
+  }
 });
-const contactForm = document.getElementById('contact-form');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_2oblj9d',
-        'template_o88v3qj',
-        this,
-        'dnzbIaWyG8WGeMYlo'
-      )
-      .then(() => {
-        formStatus.textContent =
-          'Message sent successfully!';
-        
-        formStatus.classList.remove('error');
-        formStatus.classList.add('success');
-  
-        contactForm.reset();
-  
-        submitButton.disabled = false;
-        submitButton.textContent = 'Send Message';
-      })
-      .catch((error) => {
-        console.error(error);
-  
-        formStatus.textContent =
-          'Failed to send message. Please try again.';
-  
-        formStatus.classList.remove('success');
-        formStatus.classList.add('error');
-  
-        submitButton.disabled = false;
-        submitButton.textContent = 'Send Message';
-      });
-  });
-}
