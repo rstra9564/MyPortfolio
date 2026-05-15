@@ -87,7 +87,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(15, 15, 15, 0.96); // very dark grey
+  background: rgba(15, 15, 15, 0.96);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
@@ -96,24 +96,6 @@ body {
   align-items: center;
 
   // glowing line along bottom of navbar
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      $neon-green 20%,
-      $neon-green 80%,
-      transparent 100%
-    );
-    box-shadow: 0 0 15px $neon-green;
-    pointer-events: none;
-  }
-
   .navbar-brand {
     font-size: 1.5rem;
     font-weight: 700;
@@ -478,19 +460,12 @@ body {
   // Skills tags now match project tags
   .skill-badge {
     padding: 0.5rem 1rem;
-  
     border-radius: 999px;
-  
     background: rgba(50, 245, 178, 0.08);
-  
     border: 1px solid rgba(50, 245, 178, 0.35);
-  
-    color: #32f5b2;
-  
+    color: #47f8ba;
     font-size: 0.85rem;
-  
     white-space: nowrap;
-  
     flex: 0 0 auto;
   }
 
@@ -500,30 +475,20 @@ body {
 
 .projects-section {
   padding: 6rem 0;
-
   position: relative;
-
   color: #ffffff;
 }
 
 .projects-glass {
   position: relative;
-
   background: rgba(8, 10, 15, 0.72);
-
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
-
   border: 1px solid rgba(255, 255, 255, 0.04);
-
   border-radius: 32px;
-
   padding: 4rem 3rem;
-
   overflow: hidden;
-
   margin-top: 2rem;
-
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.45),
     0 0 40px rgba(50, 245, 178, 0.05);
@@ -545,15 +510,10 @@ body {
 
 .project-card {
   position: relative;
-
   height: 100%;
-
   overflow: hidden;
-
   border-radius: 24px;
-
   background: rgba(8, 10, 15, 0.78);
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
@@ -570,7 +530,6 @@ body {
 
   &:hover {
     transform: translateY(-10px);
-
     border-color: rgba(50, 245, 178, 0.2);
 
     box-shadow:
@@ -582,7 +541,6 @@ body {
     content: '';
 
     position: absolute;
-
     inset: 0;
 
     background: linear-gradient(
@@ -592,7 +550,6 @@ body {
     );
 
     pointer-events: none;
-
     z-index: 1;
   }
 }
@@ -603,36 +560,26 @@ body {
 
 .project-image-wrapper {
   position: relative;
-
   overflow: hidden;
-
   height: 150px;
 }
 
 .project-image {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   transition: transform 0.6s ease;
 }
 
 .project-overlay {
   position: absolute;
-
   inset: 0;
-
   background: rgba(0, 0, 0, 0.45);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   opacity: 0;
-
   transition: opacity 0.35s ease;
-
   z-index: 3;
 }
 
@@ -675,29 +622,19 @@ body {
 // Tags
 .project-tags {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 0.6rem;
 }
 
 .tag {
   padding: 0.45rem 0.95rem;
-
   border-radius: 999px;
-
   background: rgba(50, 245, 178, 0.08);
-
   border: 1px solid rgba(50, 245, 178, 0.3);
-
   color: #32f5b2;
-
   font-size: 0.82rem;
-
   font-weight: 500;
-
   white-space: nowrap;
-
   transition: all 0.25s ease;
 
   &:hover {
@@ -716,17 +653,11 @@ body {
 
 .btn-view {
   padding: 0.8rem 1.8rem;
-
   border-radius: 999px;
-
   background: rgba(255, 255, 255, 0.92);
-
   color: #000000;
-
   text-decoration: none;
-
   font-weight: 600;
-
   transition: all 0.3s ease;
 
   &:hover {
@@ -860,8 +791,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px; /* size of neon line */
-  background: #32f5b2; /* your neon green */
+  height: 4px; 
+  background: #32f5b2;
   box-shadow: 0 0 12px #32f5b2, 0 0 24px #32f5b2;
 }
 
@@ -908,7 +839,7 @@ body {
 @media (max-width: 768px) {
   .section-wrapper {
     padding: 3rem 0;
-    margin: 0 0 6rem; // smaller but still a visible gap
+    margin: 0 0 6rem;
   }
 
   .about-section,
@@ -988,12 +919,9 @@ body {
       margin-top: 1rem;
       padding: 1rem 1.25rem;
       border-radius: 16px;
-
       background: rgba(5, 5, 5, 0.96);
       backdrop-filter: blur(12px);
-
       border: 1px solid rgba(50, 245, 178, 0.15);
-
       box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.45),
         0 0 20px rgba(50, 245, 178, 0.08);
