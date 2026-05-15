@@ -5,13 +5,16 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "homepage": "https://rstra9564.github.io/MyPortfolio"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "bootstrap": "^5.3.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "~1.64.2",
     "vite": "^4.4.9"
   }
