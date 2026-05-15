@@ -143,11 +143,28 @@ body {
 // Hero Section
 // =========================
 
+.hero-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8rem 2rem 4rem;
+
+  overflow: hidden;
+}
+
 .hero-section .hero-content {
   position: relative;
   z-index: 5;
-  width: 720px;
+
+  width: min(720px, 92%);
+
   padding: 2.75rem;
+
   border-radius: 32px;
 
   background:
@@ -174,7 +191,9 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
+
   background: rgba(0, 0, 0, 0.42);
+
   z-index: 1;
 }
 
@@ -184,8 +203,10 @@ body {
 
 .hero-particle-wrapper {
   position: relative;
+
   width: 100%;
   height: 180px;
+
   margin-bottom: 1rem;
 }
 
@@ -195,15 +216,17 @@ body {
 
   display: block;
 }
+
 // =========================
 // HERO DIVIDER
 // =========================
 
 .hero-divider {
-
   position: relative;
+
   width: 72%;
   height: 2px;
+
   margin:
     -0.2rem auto
     2.2rem auto;
@@ -225,6 +248,7 @@ body {
 
   z-index: 10;
 }
+
 // =========================
 // Subtitle
 // =========================
@@ -242,22 +266,32 @@ body {
 // =========================
 
 .hero-glow-btn {
-
   position: relative;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   padding: 1rem 2.9rem;
+
   border-radius: 999px;
+
   background: rgba(0, 0, 0, 0.18);
+
   backdrop-filter: blur(10px);
+
   color: #ffffff !important;
+
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+
   text-decoration: none !important;
+
   border: 1px solid rgba(50, 245, 178, 0.75);
+
   cursor: pointer;
+
   transition: all 0.3s ease;
 
   box-shadow:
@@ -267,9 +301,10 @@ body {
 }
 
 .hero-glow-btn:hover {
-
   transform: translateY(-3px);
+
   background: #32f5b2;
+
   color: #07110e !important;
 
   box-shadow:
@@ -283,12 +318,22 @@ body {
 
 @media (max-width: 768px) {
 
-  .hero-content {
+  .hero-section {
+    padding: 7rem 1rem 3rem;
+  }
+
+  .hero-section .hero-content {
     width: 100%;
+
+    padding: 2rem;
   }
 
   .hero-particle-wrapper {
     height: 120px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
   }
 }
 
