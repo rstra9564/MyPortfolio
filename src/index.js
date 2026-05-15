@@ -1,5 +1,4 @@
 import './styles.scss';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import emailjs from '@emailjs/browser';
 
 document.addEventListener('DOMContentLoaded', () => {
