@@ -45,23 +45,38 @@
       </div>
     </nav>
 
-    <!-- Hero Section with Parallax -->
-    <section id="home" class="hero-section parallax">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h2 class="hero-title">Hello . . .</h2>
-        <p class="hero-subtitle">Full Stack Developer & UI Designer.</p>
-        <a href="#about" class="btn btn-hero">Learn More</a>
-      </div>
-    </section>
+<!-- Hero Section -->
+<section id="home" class="hero-section parallax">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-particle-wrapper">
+
+      <canvas id="hero-particles"></canvas>
+
+    </div>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">
+      Full Stack Developer & UI Designer.
+    </p>
+
+    <a href="#about" class="hero-glow-btn">
+      Learn More
+    </a>
+
+  </div>
+
+</section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
 
       <div class="container">
     
-        <div class="about-glass">
-    
+        <div class="about-glass glow-card">
+          
           <div class="row align-items-center g-5">
     
             <!-- LEFT SIDE -->
@@ -180,169 +195,373 @@
     <!-- Parallax Divider -->
     <div class="parallax-divider parallax-1"></div>
 
-    <!-- Projects Section -->
-    <section class="section-wrapper">
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <h2 class="section-title text-center mb-5">My Projects</h2>
-        <div class="row g-4">
-          <!-- Project Card 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <div class="project-image-wrapper">
-                <img src="src/static/images/SIMPLECHATPROJECT.png"
-                     alt="Project 1"
-                     class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/rstra9564/Simple-Chat" class="btn btn-view" target="_blank">View Project</a>
-                </div>
+<!-- =========================
+Projects Section
+========================= -->
+<section id="projects" class="projects-section">
+
+  <div class="container">
+
+    <div class="projects-glass glow-card">
+
+      <h2 class="section-title text-center">
+        My Projects
+      </h2>
+
+      <div class="row g-4">
+
+        <!-- Project 1 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="src/static/images/SIMPLECHATPROJECT.png"
+                alt="Simple Chat"
+                class="project-image"
+              >
+
+              <div class="project-overlay">
+
+                <a
+                  href="https://github.com/rstra9564/Simple-Chat"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  View Project
+                </a>
+
               </div>
-              <div class="project-content">
-                <h3 class="project-title">Simple Chat</h3>
-                <p class="project-description">
-                  A Simple program for users to chat with one another. Includes admin abilities.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">ASP.NET</span>
-                  <span class="tag">C#</span>
-                  <span class="tag">SQL</span>
-                </div>
-              </div>
+
             </div>
+
+            <div class="project-content">
+
+              <h3 class="project-title">
+                Simple Chat
+              </h3>
+
+              <p class="project-description">
+                A simple chat platform allowing users to communicate with one another while including administrative functionality.
+              </p>
+
+              <div class="project-tags">
+
+                <span class="tag">ASP.NET</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL</span>
+
+              </div>
+
+            </div>
+
           </div>
 
-          <!-- Project Card 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <div class="project-image-wrapper">
-                <img src="src/static/images/POLLSPROJECT.png"
-                     alt="Project 2"
-                     class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/rstra9564/Polls-Project" class="btn btn-view" target="_blank">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Polls Project</h3>
-                <p class="project-description">
-                  A collaborative Platform for users to create their own Polls.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">SQL</span>
-                  <span class="tag">Django</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Card 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <div class="project-image-wrapper">
-                <img src="src/static/images/PORTFOLIOPROJECT.png"
-                     alt="Project 3"
-                     class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/rstra9564/MyPortfolio" class="btn btn-view" target="_blank">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Portfolio Website</h3>
-                <p class="project-description">
-                  A modern, responsive portfolio showcasing my creative work with smooth animations.(The current site you are viewing)
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Bootstrap</span>
-                  <span class="tag">SCSS</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Card 4 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <div class="project-image-wrapper">
-                <img src="src/static/images/GUITARSHOPPROJECT.png"
-                     alt="Project 4"
-                     class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/rstra9564/GuitarShop" class="btn btn-view" target="_blank">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Guitar Shop</h3>
-                <p class="project-description">
-                  An E-commerce project focused on purchasing and exploring Guitars.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Javascript</span>
-                  <span class="tag">Bootstrap</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Card 5 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <div class="project-image-wrapper">
-                <img src="src/static/images/CARDEALERSHIPPROJECT.png"
-                     alt="Project 5"
-                     class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/rstra9564/Car-Dealership" class="btn btn-view" target="_blank">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Car Dealership</h3>
-                <p class="project-description">
-                  A project focused on viewing and filtering a selection of vehicles.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Javascript</span>
-                  <span class="tag">Bootstrap</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Card 6 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <div class="project-image-wrapper">
-                <img src="src/static/images/ATHLETICSHOPPROJECT.png"
-                     alt="Project 6"
-                     class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/rstra9564/Athletic-Store" class="btn btn-view">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Athletic Store</h3>
-                <p class="project-description">
-                  An E-commerce site for purchasing athletic gear.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">Javascript</span>
-                  <span class="tag">Bootstrap</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+
+        <!-- Project 2 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="src/static/images/POLLSPROJECT.png"
+                alt="Polls Project"
+                class="project-image"
+              >
+
+              <div class="project-overlay">
+
+                <a
+                  href="https://github.com/rstra9564/Polls-Project"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  View Project
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-content">
+
+              <h3 class="project-title">
+                Polls Project
+              </h3>
+
+              <p class="project-description">
+                A collaborative platform where users can create and manage custom polls.
+              </p>
+
+              <div class="project-tags">
+
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Django</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="src/static/images/PORTFOLIOPROJECT.png"
+                alt="Portfolio Website"
+                class="project-image"
+              >
+
+              <div class="project-overlay">
+
+                <a
+                  href="https://github.com/rstra9564/MyPortfolio"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  View Project
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-content">
+
+              <h3 class="project-title">
+                Portfolio Website
+              </h3>
+
+              <p class="project-description">
+                A modern responsive portfolio with glassmorphism UI and smooth interactions.
+              </p>
+
+              <div class="project-tags">
+
+                <span class="tag">Bootstrap</span>
+                <span class="tag">SCSS</span>
+                <span class="tag">JavaScript</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="src/static/images/GUITARSHOPPROJECT.png"
+                alt="Guitar Shop"
+                class="project-image"
+              >
+
+              <div class="project-overlay">
+
+                <a
+                  href="#"
+                  class="btn-view"
+                >
+                  View Project
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-content">
+
+              <h3 class="project-title">
+                Guitar Shop
+              </h3>
+
+              <p class="project-description">
+                A responsive storefront focused on modern e-commerce design and shopping flow.
+              </p>
+
+              <div class="project-tags">
+
+                <span class="tag">JavaScript</span>
+                <span class="tag">Bootstrap</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="src/static/images/CARDEALERSHIPPROJECT.png"
+                alt="Car Dealership"
+                class="project-image"
+              >
+
+              <div class="project-overlay">
+
+                <a
+                  href="#"
+                  class="btn-view"
+                >
+                  View Project
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-content">
+
+              <h3 class="project-title">
+                Car Dealership
+              </h3>
+
+              <p class="project-description">
+                A dealership website allowing users to browse inventory and vehicle details.
+              </p>
+
+              <div class="project-tags">
+
+                <span class="tag">JavaScript</span>
+                <span class="tag">Bootstrap</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-image-wrapper">
+
+              <img
+                src="src/static/images/ATHLETICSHOPPROJECT.png"
+                alt="Athletic Store"
+                class="project-image"
+              >
+
+              <div class="project-overlay">
+
+                <a
+                  href="#"
+                  class="btn-view"
+                >
+                  View Project
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="project-content">
+
+              <h3 class="project-title">
+                Athletic Store
+              </h3>
+
+              <p class="project-description">
+                A responsive athletic apparel storefront with modern UI and branding.
+              </p>
+
+              <div class="project-tags">
+
+                <span class="tag">React</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">JavaScript</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Empty Placeholder 7 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-placeholder-content">
+
+              <h3>Coming Soon</h3>
+
+              <p>
+                Additional project currently in development.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Empty Placeholder 8 -->
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="project-card glow-card">
+
+            <div class="project-placeholder-content">
+
+              <h3>Coming Soon</h3>
+
+              <p>
+                Additional project currently in development.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-    </section>
-  </section>
+
+    </div>
+
+  </div>
+
+</section>
     <!-- Parallax Divider 2 -->
     <div class="parallax-divider parallax-2"></div>
 
     <section class="section-wrapper contact-wrapper">
       <section id="contact" class="contact-section">
-        <div class="glass-box">
+        <div class="glass-box glow-card">
           <div class="container">
             <h2 class="section-title">Contact</h2>
             <p class="contact-intro">
